@@ -12,7 +12,8 @@ int main()
     // string4_2();
     // strings();
     // input_str();
-    address_input();
+    // address_input();
+    str_obj();
 }
 
 void string4_2()

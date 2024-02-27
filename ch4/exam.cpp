@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <cstring>
 using namespace std;
 
@@ -42,4 +43,21 @@ void address_input()
     //实际上读取到的是一个换行符，需要其他语句接收换行符才能正常输入
     cout << "year " << year << endl;
     cout << "address " << address << endl; 
+}
+// string 类
+void str_obj()
+{
+    string str1 ,str2, str3;
+    cin >> str1;
+    str2 = "hello " + str1;
+    str3 += "for a day ";
+    cout << "str1 = " << str1 << endl;
+    cout << "str2 = " << str2 << endl;
+    cout << "str3 = " << str3 << endl;
+
+    char charr1;
+    char charr2;
+    cin >> charr1;
+    strcpy(&charr2, &charr1);
+    strcat(&charr1, ", world");
 }
