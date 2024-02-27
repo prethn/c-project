@@ -3,3 +3,4 @@ doc/Cpp-Primer-Plus-6th/
 *.vscode
 *a.out
 *output/
+*build/
