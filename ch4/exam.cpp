@@ -7,6 +7,18 @@ int add (int a, int b)
 {
     return a+b;
 }
+
+void string4_2()
+{
+    char dog[6] = {'d', 'e', 'u',' ', 'v', 'p'};
+    // char cat[8] = {'f', 'a', 't', 'e', 's', 's', 'a', '\0'};
+    char cat[8] = "fatessa";
+    // cout << dog << endl;
+    cout << cat << endl;
+    cout << "The entire high-level implementation of the model " 
+            "is contained in whisper.h and whisper.cpp." << endl; 
+}
+
 void strings()
 {
     const int size = 15;
@@ -35,7 +47,7 @@ void input_str()
 void address_input()
 {
     int year;
-    (cin >> year).get();//利用cin >> year返回的cin对象，将调用拼接起来
+    (cin >> year).get();//利用 cin >> year 返回的 cin 对象，将调用拼接起来
     // cin.get();
     cout << "please input:";
     char address[80];
@@ -55,9 +67,11 @@ void str_obj()
     cout << "str2 = " << str2 << endl;
     cout << "str3 = " << str3 << endl;
 
-    char charr1;
-    char charr2;
+    char charr1[20];
+    char charr2[20];
     cin >> charr1;
-    strcpy(&charr2, &charr1);
-    strcat(&charr1, ", world");
+    strcpy(charr2, charr1);
+    strcat(charr1, ", world");
+    cout << "charr2 " << charr2 << endl;
+    cout << "charr1 " << charr1 << endl;
 }
