@@ -73,11 +73,11 @@ void pract_ch3()
     cout << endl;
     cout << static_cast<float> (8 * 9 + 12 / 6 +10 % 5) << endl; 
 }
- void pract_9()
- {
+void pract_9()
+{
     double x1 = 9.88;
     double x2 = 1.12;
     auto x3 = 11.23f;
     int sum = int (x1) + int (x2);
-    cout << sum << endl << int (x1) << endl << int (x2) << endl << x3 << endl;
- }
+    cout << sum << endl << int (x1) << endl << int (x2) << endl << x3 << endl; 
+}
