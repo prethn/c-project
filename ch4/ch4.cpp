@@ -25,5 +25,6 @@ int main()
     //     cin.get();
     // }
     // str_obj();
-    str_io4_10();
+    // str_io4_10();
+    awsome1();
 }
