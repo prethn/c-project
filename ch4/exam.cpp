@@ -74,4 +74,21 @@ void str_obj()
     strcat(charr1, ", world");
     cout << "charr2 " << charr2 << endl;
     cout << "charr1 " << charr1 << endl;
+
+    int len1 = str1.size();
+    int len2 = strlen(charr1);
+    cout << "len1 " << len1 << endl << "len2 " << len2 << endl;
+}
+// string类I/O
+void str_io4_10()
+{
+    char  charr[20];
+    string str;
+    cin.getline(charr, 20);
+    // getline(cin, str);// 将cin作为参数，指出到哪里找输入，并存储到str
+    cin >> str;
+    cout << "charr " << charr << endl << "str " << str << endl;
+    cout << "\"(who wouldn't)\", she whispered." << endl;
+    cout << R"+*("(who wouldn't)", she whispered.)+*" << endl;
+    // R, Ru, UR
 }

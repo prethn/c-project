@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8 )
 project(CH4_PROJECT)
-# include_directories(.)
+include_directories(include)
 # link_directories(.)
 # add_executable(ch4 ch4.cpp)
 # target_link_libraries(ch4 .)

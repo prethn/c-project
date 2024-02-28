@@ -24,5 +24,6 @@ int main()
     //     (*fun[i])();
     //     cin.get();
     // }
-    str_obj();
+    // str_obj();
+    str_io4_10();
 }
