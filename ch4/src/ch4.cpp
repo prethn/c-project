@@ -15,7 +15,7 @@ int main()
     // strings();
     // input_str();
     // address_input();
-// 函数指针
+// 函数指针------------
     // func = str_obj;
     // func();
 
@@ -24,7 +24,13 @@ int main()
     //     (*fun[i])();
     //     cin.get();
     // }
+//-------------
     // str_obj();
     // str_io4_10();
-    awsome1();
+    // awsome1();
+    // guest();
+    // guest_complex();
+    // 函数指针
+    func = address4_14;
+    func();
 }
