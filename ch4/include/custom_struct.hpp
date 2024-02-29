@@ -1,7 +1,7 @@
 #pragma once
 
 #include<iostream>
-#include<string>
+#include<cstring>
  
 using namespace std;
 
@@ -34,4 +34,7 @@ struct student
 //     os << "commodity: " << s.commodity << endl;
 //     return os;
 // }
-
+struct xiaoHeiZi
+{
+    float height;
+};

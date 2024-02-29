@@ -10,3 +10,12 @@ void awsome1();
 void guest();
 void guest_complex();
 void address4_14();
+void address4_17();
+void dyn_arr();
+void addr_ptr();
+void addr2D();
+void ptrstr();
+void confun();
+void getnameAfter();
+void multistruct();
+

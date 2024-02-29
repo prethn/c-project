@@ -7,8 +7,12 @@ void (* fun[])() = {str_obj, string4_2, address_input};//函数表
 
 int main()
 {
-    int sum, i;
-    sum = add(8,5);
+    // int sum, i;
+
+    func = multistruct;
+    func();
+
+    // sum = add(8,5);
     // cout << "sum = " << sum << endl; 
 
     // string4_2();
@@ -31,6 +35,5 @@ int main()
     // guest();
     // guest_complex();
     // 函数指针
-    func = address4_14;
-    func();
+    return 0;
 }
