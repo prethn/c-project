@@ -18,4 +18,7 @@ void ptrstr();
 void confun();
 void getnameAfter();
 void multistruct();
-
+void addr2();
+void addr2up();
+void trans_all();
+void choice();

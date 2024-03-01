@@ -170,9 +170,59 @@ void getnameAfter()
 void multistruct()
 {
     xiaoHeiZi a1, a2, a3;
-    a1.height = a2.height = a3.height = 0.9;
+    a1.height = 1;
+    a2.height = 2;
+    a3.height = 3;
     const xiaoHeiZi* arr[3] = {&a1, &a2, &a3};
-    cout << (*arr[1]).height << endl;
-    const xiaoHeiZi** ptrarr = arr;
-    cout << *ptrarr[1]->height << endl;
+    // cout << (*arr[1]).height << endl;
+    const xiaoHeiZi** ptrarr = arr; //使用const 编译时多一层安全检查，同时不会因意外而改变其值。
+    auto ppb = arr;
+    cout <<  (*ppb)->height << endl;
+    cout << (*(*ptrarr + 1)).height << endl;//元素偏移
+    cout << (**(ptrarr + 1)).height << endl;//指针偏移
 }
+// 指针转向
+void func(int **p, int* b)  //2
+{
+    cout<<"func:&p="<<&p<<",p="<<p<<endl;
+    *p = b;  //3
+    cout<<"func:&p="<<&p<<",p="<<p<<endl;
+}
+void addr2()
+{
+    int a= 10;
+    int b = 100;
+    int *q;
+    cout<<"&a="<<&a<<",&b="<<&b<<",&q="<<&q<<endl;
+    q = &a;
+    cout<<"*q="<<*q<<",q="<<q<<",&q="<<&q<<endl;
+    func(&q, &b);  //1
+    cout<<"*q="<<*q<<",q="<<q<<",&q="<<&q<<endl;
+}
+// 指针转向
+void transptr(int** pt, int* q)
+{
+    *pt = q;
+}
+void addr2up()
+{
+    int a = 9;
+    int b = 20;
+    int* p = &a;
+    cout << "p " << p << " &a " << &a << endl;
+    int** q1 = &p;
+    cout << "q1 " << q1 << " &p " << &p << endl;
+    cout << endl;
+    cout << "p " << p << " &p " << &p << endl;
+    *q1 = &b;//*q = p; p = &b;
+    cout << "*q1 " << *q1 << " &b " << &b << endl;
+    transptr(&p, *q1);
+    // &p = *q;//非法的 
+    cout << "b: " << *p << endl;
+ }
+ void trans_all()
+ {
+    xiaoHeiZi arr[2];
+    arr[1].height = 2;
+    cout << (arr + 1)->height << endl;
+ }

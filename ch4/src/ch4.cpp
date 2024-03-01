@@ -9,7 +9,8 @@ int main()
 {
     // int sum, i;
 
-    func = multistruct;
+
+    func =choice;
     func();
 
     // sum = add(8,5);
