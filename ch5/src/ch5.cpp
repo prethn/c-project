@@ -2,8 +2,11 @@
 #include "test_ch5.hpp"
 using namespace std;
 
+void (*fun)();
+
 int main()
 {
-    test_bool();
+    fun = waiting;
+    fun();
     return 0;
 }
