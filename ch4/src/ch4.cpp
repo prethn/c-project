@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ch4.hpp"
+#include "ch4hw.hpp"
 using namespace std;
 
 void (* func)();
@@ -10,7 +11,7 @@ int main()
     // int sum, i;
 
 
-    func =choice;
+    func =pract4_13_8;
     func();
 
     // sum = add(8,5);

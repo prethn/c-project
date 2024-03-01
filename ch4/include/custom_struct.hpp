@@ -12,7 +12,7 @@ union id
     float price;
     long id_num;
     char id_char[20];
-} id_all;
+};
 
 // 枚举 创建符号常量，可以代替const
 enum color {yellow, red, blue, orange};
@@ -36,5 +36,6 @@ struct student
 // }
 struct xiaoHeiZi
 {
+    string idid;
     float height;
 };

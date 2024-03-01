@@ -13,6 +13,7 @@ void awsome1()
 // 结构初始化
 void guest()
 {
+    id id_all;
     // 像数组一样使用逗号分隔值列表
     student XiaoMing = 
     {
@@ -174,6 +175,8 @@ void multistruct()
     a2.height = 2;
     a3.height = 3;
     const xiaoHeiZi* arr[3] = {&a1, &a2, &a3};
+    cout << "new: " << arr[2]->height << endl; 
+    cout << "new: " << (*arr[2]).height << endl; 
     // cout << (*arr[1]).height << endl;
     const xiaoHeiZi** ptrarr = arr; //使用const 编译时多一层安全检查，同时不会因意外而改变其值。
     auto ppb = arr;
