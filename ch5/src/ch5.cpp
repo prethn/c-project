@@ -6,7 +6,7 @@ void (*fun)();
 
 int main()
 {
-    fun = waiting;
+    fun = prat5_last;
     fun();
     return 0;
 }
