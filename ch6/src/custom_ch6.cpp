@@ -2,6 +2,7 @@
 #include <cctype>
 #include <cstring>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -49,6 +50,7 @@ void exam2()
     delete [] ch;
 }
 
+// 内存泄漏
 void exam3()
 {
     char* ch = new char (255);
@@ -69,4 +71,40 @@ void exam3()
     }
     cout << endl;
     delete [] ch;
+}
+void funswi()
+{
+    char choice;
+    cin >> choice;
+
+    switch (choice)
+    {
+        case 'a' || 'A':
+                    cout << "Aa";
+                    break;
+        case 'B':
+        case 'b': cout << "Bb";
+                    break;
+        default:cout << "other";
+    }
+}
+void userinfo()
+{
+    fstream userf;
+    string name;
+    float height;
+    getline(cin, name);
+    cin >> height;
+    userf.open("../doc/userinfo.txt");
+    cout << "name: " << name << endl;
+    cout << "height: " << height << endl;
+    userf << "name: " << name  << endl;
+    userf << "height: " << height << endl;
+    userf.close();
+}
+void userinfo1()
+{
+    ofstream userf;
+    userf.open("../doc/userinfo.txt");
+    
 }

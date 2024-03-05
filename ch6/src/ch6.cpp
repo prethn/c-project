@@ -4,7 +4,7 @@ void (*fun)();
 
 int main()
 {
-    fun = exam3;
+    fun = userinfo1;
     fun();
     return 0;
 }
