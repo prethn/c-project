@@ -3,4 +3,5 @@ project(demo1Eigen)
 include_directories(include)
 add_executable(demo1 
                 src/demo1.cpp
+                src/custom_demo.cpp
                 )
