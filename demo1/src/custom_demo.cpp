@@ -26,3 +26,19 @@ void demo_doc1()
      v << 1, 2, 3;
      cout << "m * v =" << endl << m * v << endl;
 }
+void ptr_const()
+{
+     int age = 90,age1 = 80;
+     const int* ptr_age = &age;
+     cout << "before_age: " << *ptr_age << " " << ptr_age << endl;
+     ptr_age = &age1;
+     cout << "after_age1: " << *ptr_age << " " << ptr_age << endl;
+     cout << "---------------------" << endl;
+     int h1 = 100;
+     int* const ptr_height = &h1;
+     cout << "before_hight: " << *ptr_height << " " << ptr_height << endl;
+     int h2 = 111;
+     *ptr_height = h2;
+     cout << "after_hight: " << *ptr_height << " " << ptr_height << endl;
+
+}

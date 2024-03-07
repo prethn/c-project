@@ -9,3 +9,4 @@ using namespace Eigen;
 
 void output_MAT();
 void demo_doc1();
+void ptr_const();
