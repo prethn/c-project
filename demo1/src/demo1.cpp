@@ -4,7 +4,7 @@ void (*fun)();
 
 int main()
 {
-    fun = ptr_const;
+    fun = fun_2D;
     fun();
     return 0;
 }
