@@ -1,8 +1,10 @@
 #include <iostream>
+#include "ch7.hpp"
 
-using namespace std;
+void (*fun)();
 
 int main()
 {
-    
+    fun = ch7_10fun;
+    fun();
 }
