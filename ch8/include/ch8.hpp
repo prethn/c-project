@@ -21,8 +21,8 @@ void swap(T& a, T& b)
     a = a ^ b;
     b = a ^ b;
 }
-
-template <> void swap<student>(student& a, student& b)
+// 一个函数可以多次声明但只能定义一次
+template <> void swap<student> (student& a, student& b)
 {
     double i;
     i = a.height;

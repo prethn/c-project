@@ -1,0 +1,23 @@
+1、	没有声音
+		a.设置pavucontrol，重新配置里面的configuration
+		命令：pavucontrol  即可进入
+		b.重启PulseAudio服务
+		命令：pulseaudio -k
+			 pulseaudio --start
+		c.重启系统（实在不行重启系统看一下）
+2、	vscode中配置文件经常被自动更改
+		a.配置好文件之后，修改文件权限为只读（建议）
+		b.从时间线将以前保存好的文件重新copy回来
+3.	ibus经常出现问题
+		a. 命令：ibus -restart （重启ibus）
+		b.将ibus换成fcitx,并安装sogou输入法
+4.	耳机单侧无声
+		命令：alsamixer
+		调整	Headphone、PCM
+5、	配置 CMakeLists.txt 时候遵循先定义后使用（要按照顺序来编写！！！！）
+6、	使用pandoc将txt文件转成pdf
+	pandoc readme.txt -o readme.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Serif CJK SC"
+											转换引擎						开源字体
+7、 解压文件乱码，可使用unar命令进行解压
+	具体命令是：
+				unar （压缩包）
