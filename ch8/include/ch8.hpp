@@ -24,5 +24,11 @@ void swap(T& a, T& b)
 
 template <> void swap<student>(student& a, student& b)
 {
-    
+    double i;
+    i = a.height;
+    a.height = b.height;
+    b.height = i;
+    i = a.wieght;
+    a.wieght = b.wieght;
+    b.wieght = a.wieght;
 }

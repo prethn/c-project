@@ -1,8 +1,17 @@
 #include<iostream>
 #include<cstring>
+#include<ch8.hpp>
 
 using namespace std;
-
+/**
+ * @brief: 
+ *
+ * @param: 
+ * @return: 
+ *
+ * @author: prethn
+ * @date: 2024-03-10 | 23:44:13
+ */
 void fun1()
 {
     string ch;
