@@ -18,3 +18,25 @@ void fun1()
     *ptr = "efgh";
     cout << "*ptr: " << *ptr << endl;
 }
+// 函数重载，根据参数选择最合适的函数进行重载
+void fun(const double& rs)
+{
+     cout << "const double&: " << rs << endl;
+}
+void fun(double& rs)
+{
+     cout << "double&: " << rs << endl;
+}
+void fun(double&& rs)
+{
+     cout << "double&&: " << rs << endl;
+}
+void reload_fun()
+{
+    const double x = 1.1;
+    double y = 2.2;
+    cout << "函数重载……" << endl;
+    fun(x);
+    fun(y);
+    fun(x + y);
+}
