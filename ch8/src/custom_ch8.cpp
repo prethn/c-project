@@ -2,21 +2,15 @@
 #include<cstring>
 #include<ch8.hpp>
 
-using namespace std;
-/**
- * @brief: 
- *
- * @param: 
- * @return: 
- *
- * @author: prethn
- * @date: 2024-03-10 | 23:44:13
- */
+using std::cout;
+using std::cin;
+using std::endl;
+
 void fun1()
 {
-    string ch;
-    string& ref = ch;
-    string* const ptr = &ch;
+    std::string ch;
+    std::string& ref = ch;
+    std::string* const ptr = &ch;
     getline(cin, ch);
     cout << "ch: " << ch << endl;
     cout << "ref: " << ref << endl;
@@ -48,4 +42,23 @@ void reload_fun()
     fun(x);
     fun(y);
     fun(x + y);
+}
+void show(student& a)
+{
+     cout << "name: "<< a.name << endl;
+     cout << "height: "<< a.height << endl;
+     cout << "weight: "<< a.wieght << endl;
+}
+void priority_temp()
+{
+     student var_a, var_b;
+     var_a = {"xiaoming", 1.70, 130.2};
+     var_b = {"Lihua", 1.80, 140.5};
+     swap(var_a, var_b);
+     show(var_a);
+     show(var_b);
+     cout << "------------" << endl;
+     swap(var_a.height, var_b.height);
+     show(var_a);
+     show(var_b);
 }
