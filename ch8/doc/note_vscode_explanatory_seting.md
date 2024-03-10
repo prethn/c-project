@@ -1,5 +1,5 @@
-# 在vscode快捷键来输入注释模版（cpp）
->1. ctrl + shift + p --> input: configure user snippets  
+# 在vscode中通过快捷键输入注释模版（cpp）
+>1. ctrl + shift + p --> input: configure user snippets -->choice: cpp.json  
 >2. Add the following code at the end
 ```json
 	"C++ Multi-line Comment Template": {
