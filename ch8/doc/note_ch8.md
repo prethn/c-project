@@ -51,7 +51,8 @@ class MyTemplate<T*> { // 偏特化MyTemplate模板类为指针类型
 
 <div align=center><img src="../image/image.png" width=80% height=90%> </div>
 <div align=center><img src="../image/image1.png" width=80% height=90%> </div>
-<center>补全类型表</center>
+<!-- <center>补全类型表</center> -->
+<p align=center> 补全类型表 </p>
 
 
 
@@ -60,6 +61,7 @@ class MyTemplate<T*> { // 偏特化MyTemplate模板类为指针类型
    <!-- ![ios](../image/s1.png# "ios") -->
    <!-- <img src="../image/s1.png" width=50% height=80%> -->
 <div align=center><img src="../image/s1.png" width=80% height=90%> </div>
-<center>ios</center>
+<p align=center>ios</p>
+<!-- <center>ios</center> -->
    <!-- <p align=left> ios</p>
    <p align=right> ios</p> -->
