@@ -9,10 +9,11 @@ void fun(const double& rs);
 void reload_fun();
 void priority_temp();
 
-struct student{
+//有三个参数
+struct student{ 
     std::string name; //string 在标准库中
-    double height;
-    double wieght;
+    double height;// 升高
+    double wieght; //体重
 };
 
 template <typename T>

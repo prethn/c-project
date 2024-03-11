@@ -51,9 +51,14 @@ void show(student& a)
      cout << "height: "<< a.height << endl;
      cout << "weight: "<< a.wieght << endl;
 }
+
+template<typename T1, typename T2>
+auto gt(T1& a, T2& b) -> T2
+{
+     return a + b;
+}
 void priority_temp()
 {
-
      student var_a, var_b;
      var_a = {"xiaoming", 1.70, 130.2};
      var_b = {"Lihua", 1.80, 140.5};
@@ -64,4 +69,23 @@ void priority_temp()
      swap(var_a.height, var_b.height);
      show(var_a);
      show(var_b);
+     decltype(var_a.name + var_b.name) ab = var_a.name + " " + var_b.name;
+     cout << "ab:" << ab << endl;
+     double a = 9.9;
+     int b = 1;
+// 应该使用函数调用的结果来推断类型，而不是尝试从函数原型直接推断！！
+     decltype(gt(a, b)) c = gt(a, b);
+     cout << "c= " << c << endl;
+}
+
+// template<typename T1, typename T2> auto gt(T1& a, T2& b) -> T2
+// double a = 9.9;
+// int b = 1;
+// 应该使用函数调用的结果来推断类型，而不是尝试从函数原型直接推断！！
+// decltype(gt(T1&, T2&)) c = gt(a, b); //T1&, T2& 未定，所以不能这样用
+// cout << "c= " << c << endl;
+
+void demo()
+{
+     student
 }
