@@ -8,6 +8,10 @@ void fun(double& rs);
 void fun(const double& rs);
 void reload_fun();
 void priority_temp();
+void doPract_1();
+void doPract_5();
+void doPract_6();
+
 
 //有三个参数
 struct student{ 
