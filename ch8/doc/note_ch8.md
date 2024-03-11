@@ -2,8 +2,9 @@
 >- 返回值类型可以不同，但是特征标（参数列表）必须不同
 
 # 模版
+>> 最优指代的是编译器推断使用哪一种类型时执行的转换最少
 >>- 常见情形是，将模版放在头文件中，并在需要使用模版的文件中包含头文件。
->>- 优先级： 非模版 > 具体化(模板特化) > 常规模版  
+>>- 优先级： 非模版（常规函数） > 显示具体化(模板特化) > 常规模版  
 >>- 模板特化    
 
 |全特化 |偏特化|  
@@ -31,6 +32,7 @@ class MyTemplate<T*> { // 偏特化MyTemplate模板类为指针类型
 >> int& apple = i;  
 >> int* const p = &i;
 >> ```
+>> const 和非const 之间的区别只适用于指针和引用指向的数据
 
 >>>- 组名 arr 在上下文中会隐式转换为指向数组的指针
 >>>- 参数传递 将非const值赋给const变量是合法的，反之不行。（范围可以缩小，但一定不可以扩大） 
@@ -40,9 +42,24 @@ class MyTemplate<T*> { // 偏特化MyTemplate模板类为指针类型
 >>- cout.precision(val) 在输出的时候设定输出值以新的浮点数精度值显示，就是设置输出值的有效位数
 
 >> C++为标准输入和输出定义了一些格式标志, 它可以通过flags(), setf(), 和 unsetf() 三个函数来控制。  
->> cout.setf()的作用是通过设置格式标志来控制输出形式。(具体参见下面连接) 
->> https://blog.csdn.net/baishuiniyaonulia/article/details/79144033  
+>> cout.setf()的作用是通过设置格式标志来控制输出形式。[具体参见下面连接](https://blog.csdn.net/baishuiniyaonulia/article/details/79144033)  
 >> 第一原型 用来设置输出格式   
 >> cout.setf(ios_base::left); //对所有cout的输出进行左对齐调整.  
 >> 第二原型  
->> cout.setf(ios_base::fixed, ios_base::floatfield)
+>> cout.setf(ios_base::fixed, ios_base::floatfield) 
+
+
+<div align=center><img src="../image/image.png" width=80% height=90%> </div>
+<div align=center><img src="../image/image1.png" width=80% height=90%> </div>
+<center>补全类型表</center>
+
+
+
+
+<!-- 文字、图片位置设置 -->
+   <!-- ![ios](../image/s1.png# "ios") -->
+   <!-- <img src="../image/s1.png" width=50% height=80%> -->
+<div align=center><img src="../image/s1.png" width=80% height=90%> </div>
+<center>ios</center>
+   <!-- <p align=left> ios</p>
+   <p align=right> ios</p> -->

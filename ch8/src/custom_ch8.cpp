@@ -5,7 +5,9 @@
 using std::cout;
 using std::cin;
 using std::endl;
-
+ 
+template<> void swap<student> (student&, student&);//显示具体化
+template void swap<student> (student&, student&);//显示实例化
 void fun1()
 {
     std::string ch;
@@ -51,6 +53,7 @@ void show(student& a)
 }
 void priority_temp()
 {
+
      student var_a, var_b;
      var_a = {"xiaoming", 1.70, 130.2};
      var_b = {"Lihua", 1.80, 140.5};
