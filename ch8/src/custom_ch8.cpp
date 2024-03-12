@@ -142,8 +142,7 @@ void doPract_5()
 }
 
 
-template<typename T>
-T pract_6(T* a, int freq)
+template<typename T> T pract_6(T* a, int freq)
 {
     T b;
     for(int i = 1; i < freq; ++i)
@@ -182,6 +181,21 @@ template<> char pract_6<char> (char* a, int freq)
         return *(a + freq -1);
     }
 }
+// 
+template <> char* pract_6<char*> (char** arr, int freq)
+{
+    char** a = arr;
+    int flag = 0;
+    for (int i = 1; i < freq; ++i)
+    {
+        if (strlen(*a) < strlen(arr[i]))
+        {
+            flag = i;
+            **a = *arr[i];
+        }
+    }
+    return arr[flag];
+}
 void doPract_6()
 {
     int a[6] ={4,2,5,3,7,1};
@@ -190,11 +204,19 @@ void doPract_6()
     double var_b = pract_6(ar, 4);
     cout << "最大值var_a: " << var_a << endl;
     cout << "最大值var_b: " << var_b << endl;
-    const char* a1 = "aaaa";
-    const char* a2 = "aaaa";
-    const char* a3 = "aaaa";
-    const char* a4 = "aaaa";
-    const char* a5 = "aaaa";
-    const char* arr[5] = {a1, a2, a3, a4, a5};
-    char arrr = pract_6(arr[5], 5);
+    char a1[] = "aaaa";
+    char a2[] = "baaa1";
+    char a3[] = "caaa22";
+    char a4[] = "daaa334";
+    char a5[] = "eaaa4444";
+    char a6[] = "eaaa44441";
+    // 二级指针！！
+    char* arr[] = { a1, 
+                    a2,
+                    a3,
+                    a4,
+                    a5,
+                    a6};
+    char* arrr = pract_6(arr, 6);
+    cout << "最大的字符串: " << arrr << endl;
 }
