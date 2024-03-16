@@ -11,6 +11,6 @@ int main()
 {
     cout << "cat = " << cat << endl;
     fun = lfun;
-    fun();
+    fun();  
     return 0;
 }
