@@ -33,3 +33,11 @@ void lfun()
     // cin.get(ch);
     // cout << ch << endl;
 }
+void do_veep()
+{
+    const veep student = {"XiaoHeiZi", 18, 199};
+    cout << "student.age = " << student.age << endl;
+    // strcpy(student.name, "LiHua");
+    student.age = 19;
+    cout << "student.age = " << student.age << endl;
+}
