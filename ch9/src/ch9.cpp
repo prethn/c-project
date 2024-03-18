@@ -16,6 +16,6 @@ void do_fun(fun cbk)
 int main()
 {
     // cout << "cat = " << cat << endl;
-    do_fun(do_veep);
+    do_fun(together);
     return 0;
 }
