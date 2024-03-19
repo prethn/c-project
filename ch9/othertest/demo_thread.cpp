@@ -117,6 +117,7 @@ void* cbk_t1(void*)
         num = cur;
         cout << "线程1: " << pthread_self() << "  当前值： " << cur << endl;
         pthread_mutex_unlock(&mute);
+        cout << "线程1 lock_out" << endl;
     }
     return NULL;
 }
@@ -131,6 +132,7 @@ void* cbk_t2(void*)
         num = cur;
         cout << "线程2: " << pthread_self() << "  当前值： " << cur << endl;
         pthread_mutex_unlock(&mute);
+        cout << "线程2 trylock" << endl;
     }
     return NULL;
 }
