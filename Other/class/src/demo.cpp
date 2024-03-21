@@ -46,9 +46,9 @@ class demo
 // 类的成员函数可以借助成员变量保存数据状态
 public:
     // 
-    int age;
+    const int age;
     string name;
-    Cboy x_boy;
+    Cboy& x_boy;
     int time = 0;
     // char* ch = new char; 
     // int* ptr;
@@ -75,7 +75,11 @@ public:
     // } 
 
     // Cboy boy 调用一次拷贝构造函数，x_boy(boy) （不是内置数据类型）也调用一次拷贝构造函数
-    demo(string name, int age,Cboy boy):  name(name+" xxx"),age(age -4 )
+    // 在该函数内传入 Cboy boy 参数，会执行拷贝构造函数，然后该函数执行完之后该变量被析构。
+    // 执行完拷贝构造函数之后，紧接着执行上面 Cboy x_boy 的构造函数。
+    // 最后执行完下面构造函数{}内部程序之后将 Cboy boy 析构。
+    // 要注意析构原则不是按照输出字面顺序来解释，而是按照栈的生成方法来解释的！！！！
+    demo(string name, int age,Cboy boy1):  name(name+" xxx"),age(age -4 ),x_boy(boy1)
     { 
         cout << "aaa\n";
         // x_boy.height = boy.height;
