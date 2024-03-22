@@ -43,12 +43,13 @@ public:
 
 class demo
 {
+    // 如果成员函数不会修改成员变量，就应该加 const（在成员函数后面加） 修饰
 // 类的成员函数可以借助成员变量保存数据状态
 public:
-    // 
-    const int age;
+    // 类的成员没有出现在初始化列表，编译器就采用默认的初始化方法
+    mutable int age;
     string name;
-    Cboy& x_boy;
+    // Cboy& x_boy;
     int time = 0;
     // char* ch = new char; 
     // int* ptr;
@@ -79,9 +80,9 @@ public:
     // 执行完拷贝构造函数之后，紧接着执行上面 Cboy x_boy 的构造函数。
     // 最后执行完下面构造函数{}内部程序之后将 Cboy boy 析构。
     // 要注意析构原则不是按照输出字面顺序来解释，而是按照栈的生成方法来解释的！！！！
-    demo(string name, int age,Cboy boy1):  name(name+" xxx"),age(age -4 ),x_boy(boy1)
+    demo(string name, int age):  name(name+" xxx"),age(age -4 ) 
     { 
-        cout << "aaa\n";
+        // cout << "aaa\n";
         // x_boy.height = boy.height;
         // cout << "aaa" << endl;
         // // 隐藏着bug 这个不是调用构造函数
@@ -124,10 +125,31 @@ public:
     // {
     //     name = name1; age = a;
     // }
-    void show()
+    void show() 
     {
-        cout << "age: " << age << "  name: " << name << endl;
-        cout << "x_boy " << x_boy.height << endl;
+        age = 10;
+        cout << "age0: " << age << "  name: " << name << endl;
+        // cout << "x_boy0 " << x_boy.height << endl;
+        show1();
+        show2();
+        // cout << "ptr: " << ptr << endl;
+        // cout <<"  *ptr: " << *ptr  << endl;
+        // cout << "boy's name: " << x_boy.name << endl;
+    }
+    void show1() 
+    {
+        age = 11;
+        cout << "age1: " << age << "  name: " << name << endl;
+        // cout << "x_boy1 " << x_boy.height << endl;
+        // cout << "ptr: " << ptr << endl;
+        // cout <<"  *ptr: " << *ptr  << endl;
+        // cout << "boy's name: " << x_boy.name << endl;
+    }
+    void show2() const
+    {
+        age = 12;
+        cout << "age2: " << age << "  name: " << name << endl;
+        // cout << "x_boy2 " << x_boy.height << endl;
         // cout << "ptr: " << ptr << endl;
         // cout <<"  *ptr: " << *ptr  << endl;
         // cout << "boy's name: " << x_boy.name << endl;
@@ -141,13 +163,14 @@ public:
 //     cout << "g 的地址: " << &g << endl;
 //     return g; 
 //  }
-int main()
+int main1()
 {
+    // 类的成员函数涉及到多个对象，这种情况下需要使用 this 指针
     // 以值传递方式传递实参，会调用析构函数 
     // demo g("西施",18,boy);
-    Cboy boy(11);
-    demo g("xxx",11,boy);
-    g.show();
+    // Cboy boy(11);
+    const demo g("xxx",11);
+    g.show2();
     // g.ptr = new int(3);
     // demo g1(g);
     // // *g1.ptr = 7;
