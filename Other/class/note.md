@@ -46,3 +46,52 @@
 > error:
 >>1. error: cannot bind non-const lvalue reference of type
 >>sol: 是临时变量导致的， 可用const 解决，即传递参数采用const
+
+>> 程序崩溃提示：段错误 (核心已转储)
+
+# 友元
+> 把一个类中的某个成员函数声明为另一个类的友元
+> 要从变量声明顺序以及函数调用顺序来考虑，即要符合逻辑。
+```c++ 
+// 1.
+class demo1;
+
+// 2.
+class cboy
+{
+public:
+    // 常量对象只能调用常量成员函数
+    void func1(const demo1& d) const;
+};
+
+// 3.
+// 友元函数是定义在类外部的普通函数，它被赋予了访问类的私有成员（包括私有方法和属性）的权限。
+// 友元函数不是类的成员函数，因此它不能通过对象或指针调用，也不通过this指针访问类的实例。
+class demo1
+{
+friend void show(demo1& dd);
+friend void cboy::func1(const demo1& d)const;
+// friend class cboy;
+private:
+    string name_;
+    int age_;
+public:
+    demo1(string, int);
+    int showage() const
+    {
+        return age_;
+    }
+    string showname() const
+    {
+        return name_; 
+    }
+};
+demo1::demo1(string name,int age): name_(name),age_(age)
+{
+    cout << "构造函数……\n";
+}
+
+// 4.
+void cboy::func1(const demo1& d) const { cout << "age1: " << d.age_ <<endl;}
+
+```

@@ -163,7 +163,7 @@ public:
 //     cout << "g 的地址: " << &g << endl;
 //     return g; 
 //  }
-int main1()
+int main()
 {
     // 类的成员函数涉及到多个对象，这种情况下需要使用 this 指针
     // 以值传递方式传递实参，会调用析构函数 
