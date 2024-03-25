@@ -1,0 +1,5 @@
+# generated from catkin/cmake/template/order_packages.context.py.in
+source_root_dir = '/home/szu/User/Project_A/Test_F/ROS_IN/src'
+whitelisted_packages = ''.split(';') if '' != '' else []
+blacklisted_packages = ''.split(';') if '' != '' else []
+underlay_workspaces = '/home/szu/User/Project_A/Test_F/ROS_IN/devel;/home/szu/User/Other_F/mvs_ros_pkg/build/devel;/home/szu/User/Project_A/Mix/R3live_ws/devel;/home/szu/User/Package_installOfROS/devel;/home/szu/User/Project_A/Lidar/srlivo_ws/devel;/home/szu/User/Project_A/Test_F/rosdemo1/devel;/home/szu/User/Project_A/Lidar/FastliVo_wp/devel;/home/szu/User/Project_A/Lidar/Sfastlio_wp/devel;/opt/ros/noetic'.split(';') if '/home/szu/User/Project_A/Test_F/ROS_IN/devel;/home/szu/User/Other_F/mvs_ros_pkg/build/devel;/home/szu/User/Project_A/Mix/R3live_ws/devel;/home/szu/User/Package_installOfROS/devel;/home/szu/User/Project_A/Lidar/srlivo_ws/devel;/home/szu/User/Project_A/Test_F/rosdemo1/devel;/home/szu/User/Project_A/Lidar/FastliVo_wp/devel;/home/szu/User/Project_A/Lidar/Sfastlio_wp/devel;/opt/ros/noetic' != '' else []
