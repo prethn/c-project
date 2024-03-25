@@ -1,2 +1,2 @@
 vel_pkg
--DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/szu/User/Project_A/Test_F/ROS_IN/devel -DCMAKE_INSTALL_PREFIX=/home/szu/User/Project_A/Test_F/ROS_IN/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/szu/User/Project_A/Test_F/ROS_IN/devel -DCMAKE_INSTALL_PREFIX=/home/szu/User/Project_A/Test_F/ROS_IN/install -G Unix Makefiles
