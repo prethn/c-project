@@ -1,8 +1,0 @@
-prefix=/home/szu/User/Project_A/Test_F/ROS_IN/install
-
-Name: vel_pkg
-Description: Description of vel_pkg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
