@@ -19,7 +19,7 @@ void lidar_cbk(const sensor_msgs::LaserScan msg)
     {
         vel.angular.z = 0.05;
         count = 20;
-    }
+    }   
     else
     {
         vel.linear.x = 0.5;
