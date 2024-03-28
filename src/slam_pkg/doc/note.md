@@ -1,0 +1,1 @@
+> gmapping 激光雷达距离： maxUrange < 真实传感器的最大范围 <= maxRange
